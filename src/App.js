@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import ButtonVariants from "./components/ButtonVariants";
+import { StyledThemingButton } from "./components/StyledThemingButton";
+import { ThemeObjectButton } from "./components/ThemeObjectButton";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         >
           Learn React
         </a>
+        <StyledThemingButton />
+        <ButtonVariants />
+        <ThemeObjectButton />
       </header>
     </div>
   );
