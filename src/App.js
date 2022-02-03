@@ -26,7 +26,7 @@ function App() {
         <StyledThemingButton />
         <ButtonVariants />
         <ThemeObjectButton />
-        <StyledSemanticButton>Click Here</StyledSemanticButton>
+        <StyledSemanticButton>Semantic UI Button</StyledSemanticButton>
       </header>
     </div>
   );
