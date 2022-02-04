@@ -3,16 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from "styled-components";
+import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={{ mode: "light", size: "normal" }}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+(async () => {
+  const LDProvider = await asyncWithLDProvider({
+    clientSideID: "609c2d0f5758ac0ef126e198",
+  });
+
+  ReactDOM.render(
+    <React.StrictMode>
+      <LDProvider>
+        <App />
+      </LDProvider>
+    </React.StrictMode>,
+    document.getElementById("root")
+  );
+})();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
